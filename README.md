@@ -2,6 +2,13 @@
 # REST_Proj
 REST project by P.Swistowski i P.Rybachuk
 
+# Prywatny klucz RSA (PEM)
+openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+
+# Publiczny klucz z prywatnego
+openssl rsa -pubout -in private.pem -out public.pem
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
